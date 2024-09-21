@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="History">
+    <option name="requestHistoryStates">
+      <list>
+        <requestHistoryState>
+          <option name="dateTime" value="1726059128028" />
+          <option name="id" value="35be8de0-2c96-4cff-9224-51863e2c1ce6" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJ0aW1lc3RhbXAiOiIyMDI0LTA5LTExVDEyOjUyOjA4LjAyMyswMDowMCIsInN0YXR1cyI6NDAwLCJlcnJvciI6IkJhZCBSZXF1ZXN0IiwidHJhY2UiOiJvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5iaW5kLk1pc3NpbmdTZXJ2bGV0UmVxdWVzdFBhcmFtZXRlckV4Y2VwdGlvbjogUmVxdWlyZWQgcmVxdWVzdCBwYXJhbWV0ZXIgJ2RhdGUnIGZvciBtZXRob2QgcGFyYW1ldGVyIHR5cGUgTG9uZyBpcyBub3QgcHJlc2VudFxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLm1ldGhvZC5hbm5vdGF0aW9uLlJlcXVlc3RQYXJhbU1ldGhvZEFyZ3VtZW50UmVzb2x2ZXIuaGFuZGxlTWlzc2luZ1ZhbHVlSW50ZXJuYWwoUmVxdWVzdFBhcmFtTWV0aG9kQXJndW1lbnRSZXNvbHZlci5qYXZhOjIyMClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5tZXRob2QuYW5ub3RhdGlvbi5SZXF1ZXN0UGFyYW1NZXRob2RBcmd1bWVudFJlc29sdmVyLmhhbmRsZU1pc3NpbmdWYWx1ZShSZXF1ZXN0UGFyYW1NZXRob2RBcmd1bWVudFJlc29sdmVyLmphdmE6MTk2KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLm1ldGhvZC5hbm5vdGF0aW9uLkFic3RyYWN0TmFtZWRWYWx1ZU1ldGhvZEFyZ3VtZW50UmVzb2x2ZXIucmVzb2x2ZUFyZ3VtZW50KEFic3RyYWN0TmFtZWRWYWx1ZU1ldGhvZEFyZ3VtZW50UmVzb2x2ZXIuamF2YToxMjYpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIubWV0aG9kLnN1cHBvcnQuSGFuZGxlck1ldGhvZEFyZ3VtZW50UmVzb2x2ZXJDb21wb3NpdGUucmVzb2x2ZUFyZ3VtZW50KEhhbmRsZXJNZXRob2RBcmd1bWVudFJlc29sdmVyQ29tcG9zaXRlLmphdmE6MTIyKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLm1ldGhvZC5zdXBwb3J0Lkludm9jYWJsZUhhbmRsZXJNZXRob2QuZ2V0TWV0aG9kQXJndW1lbnRWYWx1ZXMoSW52b2NhYmxlSGFuZGxlck1ldGhvZC5qYXZhOjIyNClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5tZXRob2Quc3VwcG9ydC5JbnZvY2FibGVIYW5kbGVyTWV0aG9kLmludm9rZUZvclJlcXVlc3QoSW52b2NhYmxlSGFuZGxlck1ldGhvZC5qYXZhOjE3OClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5zZXJ2bGV0Lm12Yy5tZXRob2QuYW5ub3RhdGlvbi5TZXJ2bGV0SW52b2NhYmxlSGFuZGxlck1ldGhvZC5pbnZva2VBbmRIYW5kbGUoU2VydmxldEludm9jYWJsZUhhbmRsZXJNZXRob2QuamF2YToxMTgpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5tdmMubWV0aG9kLmFubm90YXRpb24uUmVxdWVzdE1hcHBpbmdIYW5kbGVyQWRhcHRlci5pbnZva2VIYW5kbGVyTWV0aG9kKFJlcXVlc3RNYXBwaW5nSGFuZGxlckFkYXB0ZXIuamF2YTo5MjYpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5tdmMubWV0aG9kLmFubm90YXRpb24uUmVxdWVzdE1hcHBpbmdIYW5kbGVyQWRhcHRlci5oYW5kbGVJbnRlcm5hbChSZXF1ZXN0TWFwcGluZ0hhbmRsZXJBZGFwdGVyLmphdmE6ODMxKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLnNlcnZsZXQubXZjLm1ldGhvZC5BYnN0cmFjdEhhbmRsZXJNZXRob2RBZGFwdGVyLmhhbmRsZShBYnN0cmFjdEhhbmRsZXJNZXRob2RBZGFwdGVyLmphdmE6ODcpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5EaXNwYXRjaGVyU2VydmxldC5kb0Rpc3BhdGNoKERpc3BhdGNoZXJTZXJ2bGV0LmphdmE6MTA4OSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5zZXJ2bGV0LkRpc3BhdGNoZXJTZXJ2bGV0LmRvU2VydmljZShEaXNwYXRjaGVyU2VydmxldC5qYXZhOjk3OSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5zZXJ2bGV0LkZyYW1ld29ya1NlcnZsZXQucHJvY2Vzc1JlcXVlc3QoRnJhbWV3b3JrU2VydmxldC5qYXZhOjEwMTQpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5GcmFtZXdvcmtTZXJ2bGV0LmRvUG9zdChGcmFtZXdvcmtTZXJ2bGV0LmphdmE6OTE0KVxyXG5cdGF0IGpha2FydGEuc2VydmxldC5odHRwLkh0dHBTZXJ2bGV0LnNlcnZpY2UoSHR0cFNlcnZsZXQuamF2YTo1OTApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5GcmFtZXdvcmtTZXJ2bGV0LnNlcnZpY2UoRnJhbWV3b3JrU2VydmxldC5qYXZhOjg4NSlcclxuXHRhdCBqYWthcnRhLnNlcnZsZXQuaHR0cC5IdHRwU2VydmxldC5zZXJ2aWNlKEh0dHBTZXJ2bGV0LmphdmE6NjU4KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmludGVybmFsRG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE5NSlcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5kb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTQwKVxyXG5cdGF0IG9yZy5hcGFjaGUudG9tY2F0LndlYnNvY2tldC5zZXJ2ZXIuV3NGaWx0ZXIuZG9GaWx0ZXIoV3NGaWx0ZXIuamF2YTo1MSlcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5pbnRlcm5hbERvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNjQpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uZG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE0MClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5maWx0ZXIuUmVxdWVzdENvbnRleHRGaWx0ZXIuZG9GaWx0ZXJJbnRlcm5hbChSZXF1ZXN0Q29udGV4dEZpbHRlci5qYXZhOjEwMClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5maWx0ZXIuT25jZVBlclJlcXVlc3RGaWx0ZXIuZG9GaWx0ZXIoT25jZVBlclJlcXVlc3RGaWx0ZXIuamF2YToxMTYpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uaW50ZXJuYWxEb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTY0KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmRvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNDApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLkZvcm1Db250ZW50RmlsdGVyLmRvRmlsdGVySW50ZXJuYWwoRm9ybUNvbnRlbnRGaWx0ZXIuamF2YTo5MylcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5maWx0ZXIuT25jZVBlclJlcXVlc3RGaWx0ZXIuZG9GaWx0ZXIoT25jZVBlclJlcXVlc3RGaWx0ZXIuamF2YToxMTYpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uaW50ZXJuYWxEb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTY0KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmRvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNDApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLkNoYXJhY3RlckVuY29kaW5nRmlsdGVyLmRvRmlsdGVySW50ZXJuYWwoQ2hhcmFjdGVyRW5jb2RpbmdGaWx0ZXIuamF2YToyMDEpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLk9uY2VQZXJSZXF1ZXN0RmlsdGVyLmRvRmlsdGVyKE9uY2VQZXJSZXF1ZXN0RmlsdGVyLmphdmE6MTE2KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmludGVybmFsRG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE2NClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5kb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTQwKVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5TdGFuZGFyZFdyYXBwZXJWYWx2ZS5pbnZva2UoU3RhbmRhcmRXcmFwcGVyVmFsdmUuamF2YToxNjcpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLlN0YW5kYXJkQ29udGV4dFZhbHZlLmludm9rZShTdGFuZGFyZENvbnRleHRWYWx2ZS5qYXZhOjkwKVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuYXV0aGVudGljYXRvci5BdXRoZW50aWNhdG9yQmFzZS5pbnZva2UoQXV0aGVudGljYXRvckJhc2UuamF2YTo0ODMpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLlN0YW5kYXJkSG9zdFZhbHZlLmludm9rZShTdGFuZGFyZEhvc3RWYWx2ZS5qYXZhOjExNSlcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLnZhbHZlcy5FcnJvclJlcG9ydFZhbHZlLmludm9rZShFcnJvclJlcG9ydFZhbHZlLmphdmE6OTMpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLlN0YW5kYXJkRW5naW5lVmFsdmUuaW52b2tlKFN0YW5kYXJkRW5naW5lVmFsdmUuamF2YTo3NClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvbm5lY3Rvci5Db3lvdGVBZGFwdGVyLnNlcnZpY2UoQ295b3RlQWRhcHRlci5qYXZhOjM0NClcclxuXHRhdCBvcmcuYXBhY2hlLmNveW90ZS5odHRwMTEuSHR0cDExUHJvY2Vzc29yLnNlcnZpY2UoSHR0cDExUHJvY2Vzc29yLmphdmE6Mzg0KVxyXG5cdGF0IG9yZy5hcGFjaGUuY295b3RlLkFic3RyYWN0UHJvY2Vzc29yTGlnaHQucHJvY2VzcyhBYnN0cmFjdFByb2Nlc3NvckxpZ2h0LmphdmE6NjMpXHJcblx0YXQgb3JnLmFwYWNoZS5jb3lvdGUuQWJzdHJhY3RQcm90b2NvbCRDb25uZWN0aW9uSGFuZGxlci5wcm9jZXNzKEFic3RyYWN0UHJvdG9jb2wuamF2YTo5MDQpXHJcblx0YXQgb3JnLmFwYWNoZS50b21jYXQudXRpbC5uZXQuTmlvRW5kcG9pbnQkU29ja2V0UHJvY2Vzc29yLmRvUnVuKE5pb0VuZHBvaW50LmphdmE6MTc0MSlcclxuXHRhdCBvcmcuYXBhY2hlLnRvbWNhdC51dGlsLm5ldC5Tb2NrZXRQcm9jZXNzb3JCYXNlLnJ1bihTb2NrZXRQcm9jZXNzb3JCYXNlLmphdmE6NTIpXHJcblx0YXQgb3JnLmFwYWNoZS50b21jYXQudXRpbC50aHJlYWRzLlRocmVhZFBvb2xFeGVjdXRvci5ydW5Xb3JrZXIoVGhyZWFkUG9vbEV4ZWN1dG9yLmphdmE6MTE5MClcclxuXHRhdCBvcmcuYXBhY2hlLnRvbWNhdC51dGlsLnRocmVhZHMuVGhyZWFkUG9vbEV4ZWN1dG9yJFdvcmtlci5ydW4oVGhyZWFkUG9vbEV4ZWN1dG9yLmphdmE6NjU5KVxyXG5cdGF0IG9yZy5hcGFjaGUudG9tY2F0LnV0aWwudGhyZWFkcy5UYXNrVGhyZWFkJFdyYXBwaW5nUnVubmFibGUucnVuKFRhc2tUaHJlYWQuamF2YTo2MylcclxuXHRhdCBqYXZhLmJhc2UvamF2YS5sYW5nLlRocmVhZC5ydW4oVGhyZWFkLmphdmE6MTU3MClcclxuIiwibWVzc2FnZSI6IlJlcXVpcmVkIHBhcmFtZXRlciAnZGF0ZScgaXMgbm90IHByZXNlbnQuIiwicGF0aCI6Ii9hcGkvZXZlbnQifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;timestamp&quot;: &quot;2024-09-11T12:52:08.023+00:00&quot;,&#10;  &quot;status&quot;: 400,&#10;  &quot;error&quot;: &quot;Bad Request&quot;,&#10;  &quot;trace&quot;: &quot;org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type Long is not present\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)\r\n\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:126)\r\n\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n&quot;,&#10;  &quot;message&quot;: &quot;Required parameter 'date' is not present.&quot;,&#10;  &quot;path&quot;: &quot;/api/event&quot;&#10;}" />
+              <option name="code" value="400" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 12:52:08 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="close" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="35be8de0-2c96-4cff-9224-51863e2c1ce6" />
+              <option name="message" value="Bad Request" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;timestamp&quot;:&quot;2024-09-11T12:52:08.023+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;trace&quot;:&quot;org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type Long is not present\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)\r\n\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:126)\r\n\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n&quot;,&quot;message&quot;:&quot;Required parameter 'date' is not present.&quot;,&quot;path&quot;:&quot;/api/event&quot;}" />
+              <option name="size" value="5503" />
+              <option name="time" value="112" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726059150497" />
+          <option name="id" value="14c52af5-9e21-4a54-8843-027df7c6dccf" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJ0aW1lc3RhbXAiOiIyMDI0LTA5LTExVDEyOjUyOjMwLjQ5MiswMDowMCIsInN0YXR1cyI6NDAwLCJlcnJvciI6IkJhZCBSZXF1ZXN0IiwidHJhY2UiOiJvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5iaW5kLk1pc3NpbmdTZXJ2bGV0UmVxdWVzdFBhcmFtZXRlckV4Y2VwdGlvbjogUmVxdWlyZWQgcmVxdWVzdCBwYXJhbWV0ZXIgJ3N0YXRlJyBmb3IgbWV0aG9kIHBhcmFtZXRlciB0eXBlIFN0cmluZyBpcyBub3QgcHJlc2VudFxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLm1ldGhvZC5hbm5vdGF0aW9uLlJlcXVlc3RQYXJhbU1ldGhvZEFyZ3VtZW50UmVzb2x2ZXIuaGFuZGxlTWlzc2luZ1ZhbHVlSW50ZXJuYWwoUmVxdWVzdFBhcmFtTWV0aG9kQXJndW1lbnRSZXNvbHZlci5qYXZhOjIyMClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5tZXRob2QuYW5ub3RhdGlvbi5SZXF1ZXN0UGFyYW1NZXRob2RBcmd1bWVudFJlc29sdmVyLmhhbmRsZU1pc3NpbmdWYWx1ZShSZXF1ZXN0UGFyYW1NZXRob2RBcmd1bWVudFJlc29sdmVyLmphdmE6MTk2KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLm1ldGhvZC5hbm5vdGF0aW9uLkFic3RyYWN0TmFtZWRWYWx1ZU1ldGhvZEFyZ3VtZW50UmVzb2x2ZXIucmVzb2x2ZUFyZ3VtZW50KEFic3RyYWN0TmFtZWRWYWx1ZU1ldGhvZEFyZ3VtZW50UmVzb2x2ZXIuamF2YToxMjYpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIubWV0aG9kLnN1cHBvcnQuSGFuZGxlck1ldGhvZEFyZ3VtZW50UmVzb2x2ZXJDb21wb3NpdGUucmVzb2x2ZUFyZ3VtZW50KEhhbmRsZXJNZXRob2RBcmd1bWVudFJlc29sdmVyQ29tcG9zaXRlLmphdmE6MTIyKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLm1ldGhvZC5zdXBwb3J0Lkludm9jYWJsZUhhbmRsZXJNZXRob2QuZ2V0TWV0aG9kQXJndW1lbnRWYWx1ZXMoSW52b2NhYmxlSGFuZGxlck1ldGhvZC5qYXZhOjIyNClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5tZXRob2Quc3VwcG9ydC5JbnZvY2FibGVIYW5kbGVyTWV0aG9kLmludm9rZUZvclJlcXVlc3QoSW52b2NhYmxlSGFuZGxlck1ldGhvZC5qYXZhOjE3OClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5zZXJ2bGV0Lm12Yy5tZXRob2QuYW5ub3RhdGlvbi5TZXJ2bGV0SW52b2NhYmxlSGFuZGxlck1ldGhvZC5pbnZva2VBbmRIYW5kbGUoU2VydmxldEludm9jYWJsZUhhbmRsZXJNZXRob2QuamF2YToxMTgpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5tdmMubWV0aG9kLmFubm90YXRpb24uUmVxdWVzdE1hcHBpbmdIYW5kbGVyQWRhcHRlci5pbnZva2VIYW5kbGVyTWV0aG9kKFJlcXVlc3RNYXBwaW5nSGFuZGxlckFkYXB0ZXIuamF2YTo5MjYpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5tdmMubWV0aG9kLmFubm90YXRpb24uUmVxdWVzdE1hcHBpbmdIYW5kbGVyQWRhcHRlci5oYW5kbGVJbnRlcm5hbChSZXF1ZXN0TWFwcGluZ0hhbmRsZXJBZGFwdGVyLmphdmE6ODMxKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLnNlcnZsZXQubXZjLm1ldGhvZC5BYnN0cmFjdEhhbmRsZXJNZXRob2RBZGFwdGVyLmhhbmRsZShBYnN0cmFjdEhhbmRsZXJNZXRob2RBZGFwdGVyLmphdmE6ODcpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5EaXNwYXRjaGVyU2VydmxldC5kb0Rpc3BhdGNoKERpc3BhdGNoZXJTZXJ2bGV0LmphdmE6MTA4OSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5zZXJ2bGV0LkRpc3BhdGNoZXJTZXJ2bGV0LmRvU2VydmljZShEaXNwYXRjaGVyU2VydmxldC5qYXZhOjk3OSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5zZXJ2bGV0LkZyYW1ld29ya1NlcnZsZXQucHJvY2Vzc1JlcXVlc3QoRnJhbWV3b3JrU2VydmxldC5qYXZhOjEwMTQpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5GcmFtZXdvcmtTZXJ2bGV0LmRvUG9zdChGcmFtZXdvcmtTZXJ2bGV0LmphdmE6OTE0KVxyXG5cdGF0IGpha2FydGEuc2VydmxldC5odHRwLkh0dHBTZXJ2bGV0LnNlcnZpY2UoSHR0cFNlcnZsZXQuamF2YTo1OTApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5GcmFtZXdvcmtTZXJ2bGV0LnNlcnZpY2UoRnJhbWV3b3JrU2VydmxldC5qYXZhOjg4NSlcclxuXHRhdCBqYWthcnRhLnNlcnZsZXQuaHR0cC5IdHRwU2VydmxldC5zZXJ2aWNlKEh0dHBTZXJ2bGV0LmphdmE6NjU4KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmludGVybmFsRG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE5NSlcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5kb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTQwKVxyXG5cdGF0IG9yZy5hcGFjaGUudG9tY2F0LndlYnNvY2tldC5zZXJ2ZXIuV3NGaWx0ZXIuZG9GaWx0ZXIoV3NGaWx0ZXIuamF2YTo1MSlcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5pbnRlcm5hbERvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNjQpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uZG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE0MClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5maWx0ZXIuUmVxdWVzdENvbnRleHRGaWx0ZXIuZG9GaWx0ZXJJbnRlcm5hbChSZXF1ZXN0Q29udGV4dEZpbHRlci5qYXZhOjEwMClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5maWx0ZXIuT25jZVBlclJlcXVlc3RGaWx0ZXIuZG9GaWx0ZXIoT25jZVBlclJlcXVlc3RGaWx0ZXIuamF2YToxMTYpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uaW50ZXJuYWxEb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTY0KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmRvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNDApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLkZvcm1Db250ZW50RmlsdGVyLmRvRmlsdGVySW50ZXJuYWwoRm9ybUNvbnRlbnRGaWx0ZXIuamF2YTo5MylcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5maWx0ZXIuT25jZVBlclJlcXVlc3RGaWx0ZXIuZG9GaWx0ZXIoT25jZVBlclJlcXVlc3RGaWx0ZXIuamF2YToxMTYpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uaW50ZXJuYWxEb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTY0KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmRvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNDApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLkNoYXJhY3RlckVuY29kaW5nRmlsdGVyLmRvRmlsdGVySW50ZXJuYWwoQ2hhcmFjdGVyRW5jb2RpbmdGaWx0ZXIuamF2YToyMDEpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLk9uY2VQZXJSZXF1ZXN0RmlsdGVyLmRvRmlsdGVyKE9uY2VQZXJSZXF1ZXN0RmlsdGVyLmphdmE6MTE2KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmludGVybmFsRG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE2NClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5kb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTQwKVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5TdGFuZGFyZFdyYXBwZXJWYWx2ZS5pbnZva2UoU3RhbmRhcmRXcmFwcGVyVmFsdmUuamF2YToxNjcpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLlN0YW5kYXJkQ29udGV4dFZhbHZlLmludm9rZShTdGFuZGFyZENvbnRleHRWYWx2ZS5qYXZhOjkwKVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuYXV0aGVudGljYXRvci5BdXRoZW50aWNhdG9yQmFzZS5pbnZva2UoQXV0aGVudGljYXRvckJhc2UuamF2YTo0ODMpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLlN0YW5kYXJkSG9zdFZhbHZlLmludm9rZShTdGFuZGFyZEhvc3RWYWx2ZS5qYXZhOjExNSlcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLnZhbHZlcy5FcnJvclJlcG9ydFZhbHZlLmludm9rZShFcnJvclJlcG9ydFZhbHZlLmphdmE6OTMpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLlN0YW5kYXJkRW5naW5lVmFsdmUuaW52b2tlKFN0YW5kYXJkRW5naW5lVmFsdmUuamF2YTo3NClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvbm5lY3Rvci5Db3lvdGVBZGFwdGVyLnNlcnZpY2UoQ295b3RlQWRhcHRlci5qYXZhOjM0NClcclxuXHRhdCBvcmcuYXBhY2hlLmNveW90ZS5odHRwMTEuSHR0cDExUHJvY2Vzc29yLnNlcnZpY2UoSHR0cDExUHJvY2Vzc29yLmphdmE6Mzg0KVxyXG5cdGF0IG9yZy5hcGFjaGUuY295b3RlLkFic3RyYWN0UHJvY2Vzc29yTGlnaHQucHJvY2VzcyhBYnN0cmFjdFByb2Nlc3NvckxpZ2h0LmphdmE6NjMpXHJcblx0YXQgb3JnLmFwYWNoZS5jb3lvdGUuQWJzdHJhY3RQcm90b2NvbCRDb25uZWN0aW9uSGFuZGxlci5wcm9jZXNzKEFic3RyYWN0UHJvdG9jb2wuamF2YTo5MDQpXHJcblx0YXQgb3JnLmFwYWNoZS50b21jYXQudXRpbC5uZXQuTmlvRW5kcG9pbnQkU29ja2V0UHJvY2Vzc29yLmRvUnVuKE5pb0VuZHBvaW50LmphdmE6MTc0MSlcclxuXHRhdCBvcmcuYXBhY2hlLnRvbWNhdC51dGlsLm5ldC5Tb2NrZXRQcm9jZXNzb3JCYXNlLnJ1bihTb2NrZXRQcm9jZXNzb3JCYXNlLmphdmE6NTIpXHJcblx0YXQgb3JnLmFwYWNoZS50b21jYXQudXRpbC50aHJlYWRzLlRocmVhZFBvb2xFeGVjdXRvci5ydW5Xb3JrZXIoVGhyZWFkUG9vbEV4ZWN1dG9yLmphdmE6MTE5MClcclxuXHRhdCBvcmcuYXBhY2hlLnRvbWNhdC51dGlsLnRocmVhZHMuVGhyZWFkUG9vbEV4ZWN1dG9yJFdvcmtlci5ydW4oVGhyZWFkUG9vbEV4ZWN1dG9yLmphdmE6NjU5KVxyXG5cdGF0IG9yZy5hcGFjaGUudG9tY2F0LnV0aWwudGhyZWFkcy5UYXNrVGhyZWFkJFdyYXBwaW5nUnVubmFibGUucnVuKFRhc2tUaHJlYWQuamF2YTo2MylcclxuXHRhdCBqYXZhLmJhc2UvamF2YS5sYW5nLlRocmVhZC5ydW4oVGhyZWFkLmphdmE6MTU3MClcclxuIiwibWVzc2FnZSI6IlJlcXVpcmVkIHBhcmFtZXRlciAnc3RhdGUnIGlzIG5vdCBwcmVzZW50LiIsInBhdGgiOiIvYXBpL2V2ZW50In0=" />
+              <option name="bodyString" value="{&#10;  &quot;timestamp&quot;: &quot;2024-09-11T12:52:30.492+00:00&quot;,&#10;  &quot;status&quot;: 400,&#10;  &quot;error&quot;: &quot;Bad Request&quot;,&#10;  &quot;trace&quot;: &quot;org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'state' for method parameter type String is not present\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)\r\n\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:126)\r\n\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n&quot;,&#10;  &quot;message&quot;: &quot;Required parameter 'state' is not present.&quot;,&#10;  &quot;path&quot;: &quot;/api/event&quot;&#10;}" />
+              <option name="code" value="400" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 12:52:30 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="close" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="14c52af5-9e21-4a54-8843-027df7c6dccf" />
+              <option name="message" value="Bad Request" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;timestamp&quot;:&quot;2024-09-11T12:52:30.492+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;trace&quot;:&quot;org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'state' for method parameter type String is not present\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)\r\n\tat org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)\r\n\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:126)\r\n\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n&quot;,&quot;message&quot;:&quot;Required parameter 'state' is not present.&quot;,&quot;path&quot;:&quot;/api/event&quot;}" />
+              <option name="size" value="5507" />
+              <option name="time" value="50" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726059190219" />
+          <option name="id" value="cafadac1-7a85-41fa-b435-d176619d687f" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJpZCI6bnVsbCwidGl0bGUiOiJTZWlsYSIsImRlc2NyaXB0aW9uIjoidGVzdGUiLCJpbWdVcmwiOm51bGwsImV2ZW50VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tIiwicmVtb3RlIjpmYWxzZSwiZGF0ZSI6IjE5NzAtMDEtMjBUMjE6MTM6NTAuNDMxKzAwOjAwIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: null,&#10;  &quot;title&quot;: &quot;Seila&quot;,&#10;  &quot;description&quot;: &quot;teste&quot;,&#10;  &quot;imgUrl&quot;: null,&#10;  &quot;eventUrl&quot;: &quot;http://example.com&quot;,&#10;  &quot;remote&quot;: false,&#10;  &quot;date&quot;: &quot;1970-01-20T21:13:50.431+00:00&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 12:53:10 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="cafadac1-7a85-41fa-b435-d176619d687f" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;id&quot;:null,&quot;title&quot;:&quot;Seila&quot;,&quot;description&quot;:&quot;teste&quot;,&quot;imgUrl&quot;:null,&quot;eventUrl&quot;:&quot;http://example.com&quot;,&quot;remote&quot;:false,&quot;date&quot;:&quot;1970-01-20T21:13:50.431+00:00&quot;}" />
+              <option name="size" value="149" />
+              <option name="time" value="2042" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726059318815" />
+          <option name="id" value="36359d87-a147-42fb-a8b8-94b9ba017bec" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJpZCI6bnVsbCwidGl0bGUiOiJTZWlsYSIsImRlc2NyaXB0aW9uIjoidGVzdGUiLCJpbWdVcmwiOm51bGwsImV2ZW50VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tIiwicmVtb3RlIjpmYWxzZSwiZGF0ZSI6IjE5NzAtMDEtMjBUMjE6MTM6NTAuNDMxKzAwOjAwIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: null,&#10;  &quot;title&quot;: &quot;Seila&quot;,&#10;  &quot;description&quot;: &quot;teste&quot;,&#10;  &quot;imgUrl&quot;: null,&#10;  &quot;eventUrl&quot;: &quot;http://example.com&quot;,&#10;  &quot;remote&quot;: false,&#10;  &quot;date&quot;: &quot;1970-01-20T21:13:50.431+00:00&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 12:55:18 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="36359d87-a147-42fb-a8b8-94b9ba017bec" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;id&quot;:null,&quot;title&quot;:&quot;Seila&quot;,&quot;description&quot;:&quot;teste&quot;,&quot;imgUrl&quot;:null,&quot;eventUrl&quot;:&quot;http://example.com&quot;,&quot;remote&quot;:false,&quot;date&quot;:&quot;1970-01-20T21:13:50.431+00:00&quot;}" />
+              <option name="size" value="149" />
+              <option name="time" value="558" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726059371200" />
+          <option name="id" value="8ffe18bf-575e-4bc4-a1f6-75c7837ae85b" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJpZCI6bnVsbCwidGl0bGUiOiJTZWlsYSIsImRlc2NyaXB0aW9uIjoidGVzdGUiLCJpbWdVcmwiOm51bGwsImV2ZW50VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tIiwicmVtb3RlIjpmYWxzZSwiZGF0ZSI6IjE5NzAtMDEtMjBUMjE6MTM6NTAuNDMxKzAwOjAwIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: null,&#10;  &quot;title&quot;: &quot;Seila&quot;,&#10;  &quot;description&quot;: &quot;teste&quot;,&#10;  &quot;imgUrl&quot;: null,&#10;  &quot;eventUrl&quot;: &quot;http://example.com&quot;,&#10;  &quot;remote&quot;: false,&#10;  &quot;date&quot;: &quot;1970-01-20T21:13:50.431+00:00&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 12:56:11 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="8ffe18bf-575e-4bc4-a1f6-75c7837ae85b" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;id&quot;:null,&quot;title&quot;:&quot;Seila&quot;,&quot;description&quot;:&quot;teste&quot;,&quot;imgUrl&quot;:null,&quot;eventUrl&quot;:&quot;http://example.com&quot;,&quot;remote&quot;:false,&quot;date&quot;:&quot;1970-01-20T21:13:50.431+00:00&quot;}" />
+              <option name="size" value="149" />
+              <option name="time" value="1289" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726059638650" />
+          <option name="id" value="024101e7-2a77-4b53-aa68-9f473b05cc0f" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJ0aW1lc3RhbXAiOiIyMDI0LTA5LTExVDEzOjAwOjM4LjU5NiswMDowMCIsInN0YXR1cyI6NTAwLCJlcnJvciI6IkludGVybmFsIFNlcnZlciBFcnJvciIsInRyYWNlIjoib3JnLnNwcmluZ2ZyYW1ld29yay5kYW8uRGF0YUludGVncml0eVZpb2xhdGlvbkV4Y2VwdGlvbjogY291bGQgbm90IGV4ZWN1dGUgc3RhdGVtZW50IFtFUlJPOiBvIHZhbG9yIG51bG8gbmEgY29sdW5hIFwiaW1nX3VybFwiIGRhIHJlbGHDp8OjbyBcImV2ZW50XCIgdmlvbGEgYSByZXN0cmnDp8OjbyBkZSBuw6NvLW51bG9cbiAgRGV0YWxoZTogUmVnaXN0cm8gcXVlIGZhbGhvdSBjb250w6ltICg5YWRmYmEyYy1jY2Q4LTQ1YWMtYjQ0Ni1lY2ZiN2FmMWRkZWQsIFNlaWxhLCB0ZXN0ZSwgbnVsbCwgaHR0cDovL2V4YW1wbGUuY29tLCAxOTcwLTAxLTIwIDE4OjEzOjUwLjQzMSwgZikuXSBbaW5zZXJ0IGludG8gZXZlbnQgKGRhdGUsZGVzY3JpcHRpb24sZXZlbnRfdXJsLGltZ191cmwscmVtb3RlLHRpdGxlLGlkKSB2YWx1ZXMgKD8sPyw/LD8sPyw/LD8pXTsgU1FMIFtpbnNlcnQgaW50byBldmVudCAoZGF0ZSxkZXNjcmlwdGlvbixldmVudF91cmwsaW1nX3VybCxyZW1vdGUsdGl0bGUsaWQpIHZhbHVlcyAoPyw/LD8sPyw/LD8sPyldOyBjb25zdHJhaW50IFtudWxsXVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsub3JtLmpwYS52ZW5kb3IuSGliZXJuYXRlSnBhRGlhbGVjdC5jb252ZXJ0SGliZXJuYXRlQWNjZXNzRXhjZXB0aW9uKEhpYmVybmF0ZUpwYURpYWxlY3QuamF2YToyOTApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay5vcm0uanBhLnZlbmRvci5IaWJlcm5hdGVKcGFEaWFsZWN0LnRyYW5zbGF0ZUV4Y2VwdGlvbklmUG9zc2libGUoSGliZXJuYXRlSnBhRGlhbGVjdC5qYXZhOjI0MSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLm9ybS5qcGEuSnBhVHJhbnNhY3Rpb25NYW5hZ2VyLmRvQ29tbWl0KEpwYVRyYW5zYWN0aW9uTWFuYWdlci5qYXZhOjU2NilcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLnRyYW5zYWN0aW9uLnN1cHBvcnQuQWJzdHJhY3RQbGF0Zm9ybVRyYW5zYWN0aW9uTWFuYWdlci5wcm9jZXNzQ29tbWl0KEFic3RyYWN0UGxhdGZvcm1UcmFuc2FjdGlvbk1hbmFnZXIuamF2YTo3OTUpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay50cmFuc2FjdGlvbi5zdXBwb3J0LkFic3RyYWN0UGxhdGZvcm1UcmFuc2FjdGlvbk1hbmFnZXIuY29tbWl0KEFic3RyYWN0UGxhdGZvcm1UcmFuc2FjdGlvbk1hbmFnZXIuamF2YTo3NTgpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay50cmFuc2FjdGlvbi5pbnRlcmNlcHRvci5UcmFuc2FjdGlvbkFzcGVjdFN1cHBvcnQuY29tbWl0VHJhbnNhY3Rpb25BZnRlclJldHVybmluZyhUcmFuc2FjdGlvbkFzcGVjdFN1cHBvcnQuamF2YTo2NjMpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay50cmFuc2FjdGlvbi5pbnRlcmNlcHRvci5UcmFuc2FjdGlvbkFzcGVjdFN1cHBvcnQuaW52b2tlV2l0aGluVHJhbnNhY3Rpb24oVHJhbnNhY3Rpb25Bc3BlY3RTdXBwb3J0LmphdmE6NDEzKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsudHJhbnNhY3Rpb24uaW50ZXJjZXB0b3IuVHJhbnNhY3Rpb25JbnRlcmNlcHRvci5pbnZva2UoVHJhbnNhY3Rpb25JbnRlcmNlcHRvci5qYXZhOjExOSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLmFvcC5mcmFtZXdvcmsuUmVmbGVjdGl2ZU1ldGhvZEludm9jYXRpb24ucHJvY2VlZChSZWZsZWN0aXZlTWV0aG9kSW52b2NhdGlvbi5qYXZhOjE4NClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLmRhby5zdXBwb3J0LlBlcnNpc3RlbmNlRXhjZXB0aW9uVHJhbnNsYXRpb25JbnRlcmNlcHRvci5pbnZva2UoUGVyc2lzdGVuY2VFeGNlcHRpb25UcmFuc2xhdGlvbkludGVyY2VwdG9yLmphdmE6MTM4KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsuYW9wLmZyYW1ld29yay5SZWZsZWN0aXZlTWV0aG9kSW52b2NhdGlvbi5wcm9jZWVkKFJlZmxlY3RpdmVNZXRob2RJbnZvY2F0aW9uLmphdmE6MTg0KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsuZGF0YS5qcGEucmVwb3NpdG9yeS5zdXBwb3J0LkNydWRNZXRob2RNZXRhZGF0YVBvc3RQcm9jZXNzb3IkQ3J1ZE1ldGhvZE1ldGFkYXRhUG9wdWxhdGluZ01ldGhvZEludGVyY2VwdG9yLmludm9rZShDcnVkTWV0aG9kTWV0YWRhdGFQb3N0UHJvY2Vzc29yLmphdmE6MTY1KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsuYW9wLmZyYW1ld29yay5SZWZsZWN0aXZlTWV0aG9kSW52b2NhdGlvbi5wcm9jZWVkKFJlZmxlY3RpdmVNZXRob2RJbnZvY2F0aW9uLmphdmE6MTg0KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsuYW9wLmludGVyY2VwdG9yLkV4cG9zZUludm9jYXRpb25JbnRlcmNlcHRvci5pbnZva2UoRXhwb3NlSW52b2NhdGlvbkludGVyY2VwdG9yLmphdmE6OTcpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay5hb3AuZnJhbWV3b3JrLlJlZmxlY3RpdmVNZXRob2RJbnZvY2F0aW9uLnByb2NlZWQoUmVmbGVjdGl2ZU1ldGhvZEludm9jYXRpb24uamF2YToxODQpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay5hb3AuZnJhbWV3b3JrLkpka0R5bmFtaWNBb3BQcm94eS5pbnZva2UoSmRrRHluYW1pY0FvcFByb3h5LmphdmE6MjIzKVxyXG5cdGF0IGpkay5wcm94eTQvamRrLnByb3h5NC4kUHJveHkxMjcuc2F2ZShVbmtub3duIFNvdXJjZSlcclxuXHRhdCBjb20uZXZlbnRvc3RlYy5hcGkuc2VydmljZS5FdmVudFNlcnZpY2UuY3JlYXRlRXZlbnQoRXZlbnRTZXJ2aWNlLmphdmE6NDgpXHJcblx0YXQgY29tLmV2ZW50b3N0ZWMuYXBpLmNvbnRyb2xsZXIuRXZlbnRDb250cm9sbGVyLmNyZWF0ZShFdmVudENvbnRyb2xsZXIuamF2YToyNilcclxuXHRhdCBqYXZhLmJhc2UvamRrLmludGVybmFsLnJlZmxlY3QuRGlyZWN0TWV0aG9kSGFuZGxlQWNjZXNzb3IuaW52b2tlKERpcmVjdE1ldGhvZEhhbmRsZUFjY2Vzc29yLmphdmE6MTAzKVxyXG5cdGF0IGphdmEuYmFzZS9qYXZhLmxhbmcucmVmbGVjdC5NZXRob2QuaW52b2tlKE1ldGhvZC5qYXZhOjU4MClcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5tZXRob2Quc3VwcG9ydC5JbnZvY2FibGVIYW5kbGVyTWV0aG9kLmRvSW52b2tlKEludm9jYWJsZUhhbmRsZXJNZXRob2QuamF2YToyNTUpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIubWV0aG9kLnN1cHBvcnQuSW52b2NhYmxlSGFuZGxlck1ldGhvZC5pbnZva2VGb3JSZXF1ZXN0KEludm9jYWJsZUhhbmRsZXJNZXRob2QuamF2YToxODgpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5tdmMubWV0aG9kLmFubm90YXRpb24uU2VydmxldEludm9jYWJsZUhhbmRsZXJNZXRob2QuaW52b2tlQW5kSGFuZGxlKFNlcnZsZXRJbnZvY2FibGVIYW5kbGVyTWV0aG9kLmphdmE6MTE4KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLnNlcnZsZXQubXZjLm1ldGhvZC5hbm5vdGF0aW9uLlJlcXVlc3RNYXBwaW5nSGFuZGxlckFkYXB0ZXIuaW52b2tlSGFuZGxlck1ldGhvZChSZXF1ZXN0TWFwcGluZ0hhbmRsZXJBZGFwdGVyLmphdmE6OTI2KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLnNlcnZsZXQubXZjLm1ldGhvZC5hbm5vdGF0aW9uLlJlcXVlc3RNYXBwaW5nSGFuZGxlckFkYXB0ZXIuaGFuZGxlSW50ZXJuYWwoUmVxdWVzdE1hcHBpbmdIYW5kbGVyQWRhcHRlci5qYXZhOjgzMSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5zZXJ2bGV0Lm12Yy5tZXRob2QuQWJzdHJhY3RIYW5kbGVyTWV0aG9kQWRhcHRlci5oYW5kbGUoQWJzdHJhY3RIYW5kbGVyTWV0aG9kQWRhcHRlci5qYXZhOjg3KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLnNlcnZsZXQuRGlzcGF0Y2hlclNlcnZsZXQuZG9EaXNwYXRjaChEaXNwYXRjaGVyU2VydmxldC5qYXZhOjEwODkpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5EaXNwYXRjaGVyU2VydmxldC5kb1NlcnZpY2UoRGlzcGF0Y2hlclNlcnZsZXQuamF2YTo5NzkpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuc2VydmxldC5GcmFtZXdvcmtTZXJ2bGV0LnByb2Nlc3NSZXF1ZXN0KEZyYW1ld29ya1NlcnZsZXQuamF2YToxMDE0KVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLnNlcnZsZXQuRnJhbWV3b3JrU2VydmxldC5kb1Bvc3QoRnJhbWV3b3JrU2VydmxldC5qYXZhOjkxNClcclxuXHRhdCBqYWthcnRhLnNlcnZsZXQuaHR0cC5IdHRwU2VydmxldC5zZXJ2aWNlKEh0dHBTZXJ2bGV0LmphdmE6NTkwKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLnNlcnZsZXQuRnJhbWV3b3JrU2VydmxldC5zZXJ2aWNlKEZyYW1ld29ya1NlcnZsZXQuamF2YTo4ODUpXHJcblx0YXQgamFrYXJ0YS5zZXJ2bGV0Lmh0dHAuSHR0cFNlcnZsZXQuc2VydmljZShIdHRwU2VydmxldC5qYXZhOjY1OClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5pbnRlcm5hbERvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxOTUpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uZG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE0MClcclxuXHRhdCBvcmcuYXBhY2hlLnRvbWNhdC53ZWJzb2NrZXQuc2VydmVyLldzRmlsdGVyLmRvRmlsdGVyKFdzRmlsdGVyLmphdmE6NTEpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uaW50ZXJuYWxEb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTY0KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmRvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNDApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLlJlcXVlc3RDb250ZXh0RmlsdGVyLmRvRmlsdGVySW50ZXJuYWwoUmVxdWVzdENvbnRleHRGaWx0ZXIuamF2YToxMDApXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLk9uY2VQZXJSZXF1ZXN0RmlsdGVyLmRvRmlsdGVyKE9uY2VQZXJSZXF1ZXN0RmlsdGVyLmphdmE6MTE2KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmludGVybmFsRG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE2NClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5kb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTQwKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLmZpbHRlci5Gb3JtQ29udGVudEZpbHRlci5kb0ZpbHRlckludGVybmFsKEZvcm1Db250ZW50RmlsdGVyLmphdmE6OTMpXHJcblx0YXQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuZmlsdGVyLk9uY2VQZXJSZXF1ZXN0RmlsdGVyLmRvRmlsdGVyKE9uY2VQZXJSZXF1ZXN0RmlsdGVyLmphdmE6MTE2KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5BcHBsaWNhdGlvbkZpbHRlckNoYWluLmludGVybmFsRG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE2NClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5kb0ZpbHRlcihBcHBsaWNhdGlvbkZpbHRlckNoYWluLmphdmE6MTQwKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLmZpbHRlci5DaGFyYWN0ZXJFbmNvZGluZ0ZpbHRlci5kb0ZpbHRlckludGVybmFsKENoYXJhY3RlckVuY29kaW5nRmlsdGVyLmphdmE6MjAxKVxyXG5cdGF0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLmZpbHRlci5PbmNlUGVyUmVxdWVzdEZpbHRlci5kb0ZpbHRlcihPbmNlUGVyUmVxdWVzdEZpbHRlci5qYXZhOjExNilcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5pbnRlcm5hbERvRmlsdGVyKEFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uamF2YToxNjQpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb3JlLkFwcGxpY2F0aW9uRmlsdGVyQ2hhaW4uZG9GaWx0ZXIoQXBwbGljYXRpb25GaWx0ZXJDaGFpbi5qYXZhOjE0MClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmNvcmUuU3RhbmRhcmRXcmFwcGVyVmFsdmUuaW52b2tlKFN0YW5kYXJkV3JhcHBlclZhbHZlLmphdmE6MTY3KVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5TdGFuZGFyZENvbnRleHRWYWx2ZS5pbnZva2UoU3RhbmRhcmRDb250ZXh0VmFsdmUuamF2YTo5MClcclxuXHRhdCBvcmcuYXBhY2hlLmNhdGFsaW5hLmF1dGhlbnRpY2F0b3IuQXV0aGVudGljYXRvckJhc2UuaW52b2tlKEF1dGhlbnRpY2F0b3JCYXNlLmphdmE6NDgzKVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5TdGFuZGFyZEhvc3RWYWx2ZS5pbnZva2UoU3RhbmRhcmRIb3N0VmFsdmUuamF2YToxMTUpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS52YWx2ZXMuRXJyb3JSZXBvcnRWYWx2ZS5pbnZva2UoRXJyb3JSZXBvcnRWYWx2ZS5qYXZhOjkzKVxyXG5cdGF0IG9yZy5hcGFjaGUuY2F0YWxpbmEuY29yZS5TdGFuZGFyZEVuZ2luZVZhbHZlLmludm9rZShTdGFuZGFyZEVuZ2luZVZhbHZlLmphdmE6NzQpXHJcblx0YXQgb3JnLmFwYWNoZS5jYXRhbGluYS5jb25uZWN0b3IuQ295b3RlQWRhcHRlci5zZXJ2aWNlKENveW90ZUFkYXB0ZXIuamF2YTozNDQpXHJcblx0YXQgb3JnLmFwYWNoZS5jb3lvdGUuaHR0cDExLkh0dHAxMVByb2Nlc3Nvci5zZXJ2aWNlKEh0dHAxMVByb2Nlc3Nvci5qYXZhOjM4NClcclxuXHRhdCBvcmcuYXBhY2hlLmNveW90ZS5BYnN0cmFjdFByb2Nlc3NvckxpZ2h0LnByb2Nlc3MoQWJzdHJhY3RQcm9jZXNzb3JMaWdodC5qYXZhOjYzKVxyXG5cdGF0IG9yZy5hcGFjaGUuY295b3RlLkFic3RyYWN0UHJvdG9jb2wkQ29ubmVjdGlvbkhhbmRsZXIucHJvY2VzcyhBYnN0cmFjdFByb3RvY29sLmphdmE6OTA0KVxyXG5cdGF0IG9yZy5hcGFjaGUudG9tY2F0LnV0aWwubmV0Lk5pb0VuZHBvaW50JFNvY2tldFByb2Nlc3Nvci5kb1J1bihOaW9FbmRwb2ludC5qYXZhOjE3NDEpXHJcblx0YXQgb3JnLmFwYWNoZS50b21jYXQudXRpbC5uZXQuU29ja2V0UHJvY2Vzc29yQmFzZS5ydW4oU29ja2V0UHJvY2Vzc29yQmFzZS5qYXZhOjUyKVxyXG5cdGF0IG9yZy5hcGFjaGUudG9tY2F0LnV0aWwudGhyZWFkcy5UaHJlYWRQb29sRXhlY3V0b3IucnVuV29ya2VyKFRocmVhZFBvb2xFeGVjdXRvci5qYXZhOjExOTApXHJcblx0YXQgb3JnLmFwYWNoZS50b21jYXQudXRpbC50aHJlYWRzLlRocmVhZFBvb2xFeGVjdXRvciRXb3JrZXIucnVuKFRocmVhZFBvb2xFeGVjdXRvci5qYXZhOjY1OSlcclxuXHRhdCBvcmcuYXBhY2hlLnRvbWNhdC51dGlsLnRocmVhZHMuVGFza1RocmVhZCRXcmFwcGluZ1J1bm5hYmxlLnJ1bihUYXNrVGhyZWFkLmphdmE6NjMpXHJcblx0YXQgamF2YS5iYXNlL2phdmEubGFuZy5UaHJlYWQucnVuKFRocmVhZC5qYXZhOjE1NzApXHJcbkNhdXNlZCBieTogb3JnLmhpYmVybmF0ZS5leGNlcHRpb24uQ29uc3RyYWludFZpb2xhdGlvbkV4Y2VwdGlvbjogY291bGQgbm90IGV4ZWN1dGUgc3RhdGVtZW50IFtFUlJPOiBvIHZhbG9yIG51bG8gbmEgY29sdW5hIFwiaW1nX3VybFwiIGRhIHJlbGHDp8OjbyBcImV2ZW50XCIgdmlvbGEgYSByZXN0cmnDp8OjbyBkZSBuw6NvLW51bG9cbiAgRGV0YWxoZTogUmVnaXN0cm8gcXVlIGZhbGhvdSBjb250w6ltICg5YWRmYmEyYy1jY2Q4LTQ1YWMtYjQ0Ni1lY2ZiN2FmMWRkZWQsIFNlaWxhLCB0ZXN0ZSwgbnVsbCwgaHR0cDovL2V4YW1wbGUuY29tLCAxOTcwLTAxLTIwIDE4OjEzOjUwLjQzMSwgZikuXSBbaW5zZXJ0IGludG8gZXZlbnQgKGRhdGUsZGVzY3JpcHRpb24sZXZlbnRfdXJsLGltZ191cmwscmVtb3RlLHRpdGxlLGlkKSB2YWx1ZXMgKD8sPyw/LD8sPyw/LD8pXVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUuZXhjZXB0aW9uLmludGVybmFsLlNRTFN0YXRlQ29udmVyc2lvbkRlbGVnYXRlLmNvbnZlcnQoU1FMU3RhdGVDb252ZXJzaW9uRGVsZWdhdGUuamF2YTo5NylcclxuXHRhdCBvcmcuaGliZXJuYXRlLmV4Y2VwdGlvbi5pbnRlcm5hbC5TdGFuZGFyZFNRTEV4Y2VwdGlvbkNvbnZlcnRlci5jb252ZXJ0KFN0YW5kYXJkU1FMRXhjZXB0aW9uQ29udmVydGVyLmphdmE6NTgpXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5lbmdpbmUuamRiYy5zcGkuU3FsRXhjZXB0aW9uSGVscGVyLmNvbnZlcnQoU3FsRXhjZXB0aW9uSGVscGVyLmphdmE6MTA4KVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUuZW5naW5lLmpkYmMuaW50ZXJuYWwuUmVzdWx0U2V0UmV0dXJuSW1wbC5leGVjdXRlVXBkYXRlKFJlc3VsdFNldFJldHVybkltcGwuamF2YToxOTcpXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5lbmdpbmUuamRiYy5tdXRhdGlvbi5pbnRlcm5hbC5BYnN0cmFjdE11dGF0aW9uRXhlY3V0b3IucGVyZm9ybU5vbkJhdGNoZWRNdXRhdGlvbihBYnN0cmFjdE11dGF0aW9uRXhlY3V0b3IuamF2YToxMzQpXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5lbmdpbmUuamRiYy5tdXRhdGlvbi5pbnRlcm5hbC5NdXRhdGlvbkV4ZWN1dG9yU2luZ2xlTm9uQmF0Y2hlZC5wZXJmb3JtTm9uQmF0Y2hlZE9wZXJhdGlvbnMoTXV0YXRpb25FeGVjdXRvclNpbmdsZU5vbkJhdGNoZWQuamF2YTo1NSlcclxuXHRhdCBvcmcuaGliZXJuYXRlLmVuZ2luZS5qZGJjLm11dGF0aW9uLmludGVybmFsLkFic3RyYWN0TXV0YXRpb25FeGVjdXRvci5leGVjdXRlKEFic3RyYWN0TXV0YXRpb25FeGVjdXRvci5qYXZhOjU1KVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUucGVyc2lzdGVyLmVudGl0eS5tdXRhdGlvbi5JbnNlcnRDb29yZGluYXRvclN0YW5kYXJkLmRvU3RhdGljSW5zZXJ0cyhJbnNlcnRDb29yZGluYXRvclN0YW5kYXJkLmphdmE6MTk0KVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUucGVyc2lzdGVyLmVudGl0eS5tdXRhdGlvbi5JbnNlcnRDb29yZGluYXRvclN0YW5kYXJkLmNvb3JkaW5hdGVJbnNlcnQoSW5zZXJ0Q29vcmRpbmF0b3JTdGFuZGFyZC5qYXZhOjEzMilcclxuXHRhdCBvcmcuaGliZXJuYXRlLnBlcnNpc3Rlci5lbnRpdHkubXV0YXRpb24uSW5zZXJ0Q29vcmRpbmF0b3JTdGFuZGFyZC5pbnNlcnQoSW5zZXJ0Q29vcmRpbmF0b3JTdGFuZGFyZC5qYXZhOjEwNClcclxuXHRhdCBvcmcuaGliZXJuYXRlLmFjdGlvbi5pbnRlcm5hbC5FbnRpdHlJbnNlcnRBY3Rpb24uZXhlY3V0ZShFbnRpdHlJbnNlcnRBY3Rpb24uamF2YToxMTApXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5lbmdpbmUuc3BpLkFjdGlvblF1ZXVlLmV4ZWN1dGVBY3Rpb25zKEFjdGlvblF1ZXVlLmphdmE6NjMyKVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUuZW5naW5lLnNwaS5BY3Rpb25RdWV1ZS5leGVjdXRlQWN0aW9ucyhBY3Rpb25RdWV1ZS5qYXZhOjQ5OSlcclxuXHRhdCBvcmcuaGliZXJuYXRlLmV2ZW50LmludGVybmFsLkFic3RyYWN0Rmx1c2hpbmdFdmVudExpc3RlbmVyLnBlcmZvcm1FeGVjdXRpb25zKEFic3RyYWN0Rmx1c2hpbmdFdmVudExpc3RlbmVyLmphdmE6MzcxKVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUuZXZlbnQuaW50ZXJuYWwuRGVmYXVsdEZsdXNoRXZlbnRMaXN0ZW5lci5vbkZsdXNoKERlZmF1bHRGbHVzaEV2ZW50TGlzdGVuZXIuamF2YTo0MSlcclxuXHRhdCBvcmcuaGliZXJuYXRlLmV2ZW50LnNlcnZpY2UuaW50ZXJuYWwuRXZlbnRMaXN0ZW5lckdyb3VwSW1wbC5maXJlRXZlbnRPbkVhY2hMaXN0ZW5lcihFdmVudExpc3RlbmVyR3JvdXBJbXBsLmphdmE6MTI3KVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUuaW50ZXJuYWwuU2Vzc2lvbkltcGwuZG9GbHVzaChTZXNzaW9uSW1wbC5qYXZhOjE0MjUpXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5pbnRlcm5hbC5TZXNzaW9uSW1wbC5tYW5hZ2VkRmx1c2goU2Vzc2lvbkltcGwuamF2YTo0ODcpXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5pbnRlcm5hbC5TZXNzaW9uSW1wbC5mbHVzaEJlZm9yZVRyYW5zYWN0aW9uQ29tcGxldGlvbihTZXNzaW9uSW1wbC5qYXZhOjIzMjQpXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5pbnRlcm5hbC5TZXNzaW9uSW1wbC5iZWZvcmVUcmFuc2FjdGlvbkNvbXBsZXRpb24oU2Vzc2lvbkltcGwuamF2YToxOTgxKVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUuZW5naW5lLmpkYmMuaW50ZXJuYWwuSmRiY0Nvb3JkaW5hdG9ySW1wbC5iZWZvcmVUcmFuc2FjdGlvbkNvbXBsZXRpb24oSmRiY0Nvb3JkaW5hdG9ySW1wbC5qYXZhOjQzOSlcclxuXHRhdCBvcmcuaGliZXJuYXRlLnJlc291cmNlLnRyYW5zYWN0aW9uLmJhY2tlbmQuamRiYy5pbnRlcm5hbC5KZGJjUmVzb3VyY2VMb2NhbFRyYW5zYWN0aW9uQ29vcmRpbmF0b3JJbXBsLmJlZm9yZUNvbXBsZXRpb25DYWxsYmFjayhKZGJjUmVzb3VyY2VMb2NhbFRyYW5zYWN0aW9uQ29vcmRpbmF0b3JJbXBsLmphdmE6MTY5KVxyXG5cdGF0IG9yZy5oaWJlcm5hdGUucmVzb3VyY2UudHJhbnNhY3Rpb24uYmFja2VuZC5qZGJjLmludGVybmFsLkpkYmNSZXNvdXJjZUxvY2FsVHJhbnNhY3Rpb25Db29yZGluYXRvckltcGwkVHJhbnNhY3Rpb25Ecml2ZXJDb250cm9sSW1wbC5jb21taXQoSmRiY1Jlc291cmNlTG9jYWxUcmFuc2FjdGlvbkNvb3JkaW5hdG9ySW1wbC5qYXZhOjI2NylcclxuXHRhdCBvcmcuaGliZXJuYXRlLmVuZ2luZS50cmFuc2FjdGlvbi5pbnRlcm5hbC5UcmFuc2FjdGlvbkltcGwuY29tbWl0KFRyYW5zYWN0aW9uSW1wbC5qYXZhOjEwMSlcclxuXHRhdCBvcmcuc3ByaW5nZnJhbWV3b3JrLm9ybS5qcGEuSnBhVHJhbnNhY3Rpb25NYW5hZ2VyLmRvQ29tbWl0KEpwYVRyYW5zYWN0aW9uTWFuYWdlci5qYXZhOjU2MilcclxuXHQuLi4gNjQgbW9yZVxyXG5DYXVzZWQgYnk6IG9yZy5wb3N0Z3Jlc3FsLnV0aWwuUFNRTEV4Y2VwdGlvbjogRVJSTzogbyB2YWxvciBudWxvIG5hIGNvbHVuYSBcImltZ191cmxcIiBkYSByZWxhw6fDo28gXCJldmVudFwiIHZpb2xhIGEgcmVzdHJpw6fDo28gZGUgbsOjby1udWxvXG4gIERldGFsaGU6IFJlZ2lzdHJvIHF1ZSBmYWxob3UgY29udMOpbSAoOWFkZmJhMmMtY2NkOC00NWFjLWI0NDYtZWNmYjdhZjFkZGVkLCBTZWlsYSwgdGVzdGUsIG51bGwsIGh0dHA6Ly9leGFtcGxlLmNvbSwgMTk3MC0wMS0yMCAxODoxMzo1MC40MzEsIGYpLlxyXG5cdGF0IG9yZy5wb3N0Z3Jlc3FsLmNvcmUudjMuUXVlcnlFeGVjdXRvckltcGwucmVjZWl2ZUVycm9yUmVzcG9uc2UoUXVlcnlFeGVjdXRvckltcGwuamF2YToyNzI1KVxyXG5cdGF0IG9yZy5wb3N0Z3Jlc3FsLmNvcmUudjMuUXVlcnlFeGVjdXRvckltcGwucHJvY2Vzc1Jlc3VsdHMoUXVlcnlFeGVjdXRvckltcGwuamF2YToyNDEyKVxyXG5cdGF0IG9yZy5wb3N0Z3Jlc3FsLmNvcmUudjMuUXVlcnlFeGVjdXRvckltcGwuZXhlY3V0ZShRdWVyeUV4ZWN1dG9ySW1wbC5qYXZhOjM3MSlcclxuXHRhdCBvcmcucG9zdGdyZXNxbC5qZGJjLlBnU3RhdGVtZW50LmV4ZWN1dGVJbnRlcm5hbChQZ1N0YXRlbWVudC5qYXZhOjUwMilcclxuXHRhdCBvcmcucG9zdGdyZXNxbC5qZGJjLlBnU3RhdGVtZW50LmV4ZWN1dGUoUGdTdGF0ZW1lbnQuamF2YTo0MTkpXHJcblx0YXQgb3JnLnBvc3RncmVzcWwuamRiYy5QZ1ByZXBhcmVkU3RhdGVtZW50LmV4ZWN1dGVXaXRoRmxhZ3MoUGdQcmVwYXJlZFN0YXRlbWVudC5qYXZhOjE5NClcclxuXHRhdCBvcmcucG9zdGdyZXNxbC5qZGJjLlBnUHJlcGFyZWRTdGF0ZW1lbnQuZXhlY3V0ZVVwZGF0ZShQZ1ByZXBhcmVkU3RhdGVtZW50LmphdmE6MTU1KVxyXG5cdGF0IGNvbS56YXh4ZXIuaGlrYXJpLnBvb2wuUHJveHlQcmVwYXJlZFN0YXRlbWVudC5leGVjdXRlVXBkYXRlKFByb3h5UHJlcGFyZWRTdGF0ZW1lbnQuamF2YTo2MSlcclxuXHRhdCBjb20uemF4eGVyLmhpa2FyaS5wb29sLkhpa2FyaVByb3h5UHJlcGFyZWRTdGF0ZW1lbnQuZXhlY3V0ZVVwZGF0ZShIaWthcmlQcm94eVByZXBhcmVkU3RhdGVtZW50LmphdmEpXHJcblx0YXQgb3JnLmhpYmVybmF0ZS5lbmdpbmUuamRiYy5pbnRlcm5hbC5SZXN1bHRTZXRSZXR1cm5JbXBsLmV4ZWN1dGVVcGRhdGUoUmVzdWx0U2V0UmV0dXJuSW1wbC5qYXZhOjE5NClcclxuXHQuLi4gODUgbW9yZVxyXG4iLCJtZXNzYWdlIjoiY291bGQgbm90IGV4ZWN1dGUgc3RhdGVtZW50IFtFUlJPOiBvIHZhbG9yIG51bG8gbmEgY29sdW5hIFwiaW1nX3VybFwiIGRhIHJlbGHDp8OjbyBcImV2ZW50XCIgdmlvbGEgYSByZXN0cmnDp8OjbyBkZSBuw6NvLW51bG9cbiAgRGV0YWxoZTogUmVnaXN0cm8gcXVlIGZhbGhvdSBjb250w6ltICg5YWRmYmEyYy1jY2Q4LTQ1YWMtYjQ0Ni1lY2ZiN2FmMWRkZWQsIFNlaWxhLCB0ZXN0ZSwgbnVsbCwgaHR0cDovL2V4YW1wbGUuY29tLCAxOTcwLTAxLTIwIDE4OjEzOjUwLjQzMSwgZikuXSBbaW5zZXJ0IGludG8gZXZlbnQgKGRhdGUsZGVzY3JpcHRpb24sZXZlbnRfdXJsLGltZ191cmwscmVtb3RlLHRpdGxlLGlkKSB2YWx1ZXMgKD8sPyw/LD8sPyw/LD8pXTsgU1FMIFtpbnNlcnQgaW50byBldmVudCAoZGF0ZSxkZXNjcmlwdGlvbixldmVudF91cmwsaW1nX3VybCxyZW1vdGUsdGl0bGUsaWQpIHZhbHVlcyAoPyw/LD8sPyw/LD8sPyldOyBjb25zdHJhaW50IFtudWxsXSIsInBhdGgiOiIvYXBpL2V2ZW50In0=" />
+              <option name="bodyString" value="{&#10;  &quot;timestamp&quot;: &quot;2024-09-11T13:00:38.596+00:00&quot;,&#10;  &quot;status&quot;: 500,&#10;  &quot;error&quot;: &quot;Internal Server Error&quot;,&#10;  &quot;trace&quot;: &quot;org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).] [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; SQL [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; constraint [null]\r\n\tat org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)\r\n\tat org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)\r\n\tat org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)\r\n\tat org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)\r\n\tat org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)\r\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)\r\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)\r\n\tat jdk.proxy4/jdk.proxy4.$Proxy127.save(Unknown Source)\r\n\tat com.eventostec.api.service.EventService.createEvent(EventService.java:48)\r\n\tat com.eventostec.api.controller.EventController.create(EventController.java:26)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\nCaused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).] [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]\r\n\tat org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)\r\n\tat org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)\r\n\tat org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)\r\n\tat org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)\r\n\tat org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)\r\n\tat org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)\r\n\tat org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)\r\n\tat org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)\r\n\tat org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)\r\n\tat org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:104)\r\n\tat org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:110)\r\n\tat org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632)\r\n\tat org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)\r\n\tat org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:371)\r\n\tat org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)\r\n\tat org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)\r\n\tat org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)\r\n\tat org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)\r\n\tat org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)\r\n\tat org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)\r\n\tat org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)\r\n\tat org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)\r\n\tat org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)\r\n\tat org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)\r\n\tat org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)\r\n\t... 64 more\r\nCaused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).\r\n\tat org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)\r\n\tat org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)\r\n\tat org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)\r\n\tat org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)\r\n\tat org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)\r\n\tat org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)\r\n\tat org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)\r\n\tat com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)\r\n\tat com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)\r\n\tat org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)\r\n\t... 85 more\r\n&quot;,&#10;  &quot;message&quot;: &quot;could not execute statement [ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).] [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; SQL [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; constraint [null]&quot;,&#10;  &quot;path&quot;: &quot;/api/event&quot;&#10;}" />
+              <option name="code" value="500" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 13:00:38 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="close" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="024101e7-2a77-4b53-aa68-9f473b05cc0f" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;timestamp&quot;:&quot;2024-09-11T13:00:38.596+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;trace&quot;:&quot;org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).] [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; SQL [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; constraint [null]\r\n\tat org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)\r\n\tat org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)\r\n\tat org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)\r\n\tat org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)\r\n\tat org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)\r\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)\r\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\r\n\tat org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)\r\n\tat jdk.proxy4/jdk.proxy4.$Proxy127.save(Unknown Source)\r\n\tat com.eventostec.api.service.EventService.createEvent(EventService.java:48)\r\n\tat com.eventostec.api.controller.EventController.create(EventController.java:26)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\r\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\nCaused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).] [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]\r\n\tat org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)\r\n\tat org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)\r\n\tat org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)\r\n\tat org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)\r\n\tat org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)\r\n\tat org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)\r\n\tat org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)\r\n\tat org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)\r\n\tat org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)\r\n\tat org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:104)\r\n\tat org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:110)\r\n\tat org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632)\r\n\tat org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)\r\n\tat org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:371)\r\n\tat org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)\r\n\tat org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)\r\n\tat org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)\r\n\tat org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)\r\n\tat org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)\r\n\tat org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)\r\n\tat org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)\r\n\tat org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)\r\n\tat org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)\r\n\tat org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)\r\n\tat org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)\r\n\t... 64 more\r\nCaused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).\r\n\tat org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)\r\n\tat org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)\r\n\tat org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)\r\n\tat org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)\r\n\tat org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)\r\n\tat org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)\r\n\tat org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)\r\n\tat com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)\r\n\tat com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)\r\n\tat org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)\r\n\t... 85 more\r\n&quot;,&quot;message&quot;:&quot;could not execute statement [ERRO: o valor nulo na coluna \&quot;img_url\&quot; da relação \&quot;event\&quot; viola a restrição de não-nulo\n  Detalhe: Registro que falhou contém (9adfba2c-ccd8-45ac-b446-ecfb7af1dded, Seila, teste, null, http://example.com, 1970-01-20 18:13:50.431, f).] [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; SQL [insert into event (date,description,event_url,img_url,remote,title,id) values (?,?,?,?,?,?,?)]; constraint [null]&quot;,&quot;path&quot;:&quot;/api/event&quot;}" />
+              <option name="size" value="12722" />
+              <option name="time" value="4538" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726059817547" />
+          <option name="id" value="4a5eee5f-6c32-48ef-a175-bbae3a0ab2ac" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJpZCI6IjU3OWE1YTNlLTFmNDQtNDBkYi1iMmZkLTE4MjY5MTRkN2RkNCIsInRpdGxlIjoiU2VpbGEiLCJkZXNjcmlwdGlvbiI6InRlc3RlIiwiaW1nVXJsIjoiIiwiZXZlbnRVcmwiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJyZW1vdGUiOmZhbHNlLCJkYXRlIjoiMTk3MC0wMS0yMFQyMToxMzo1MC40MzErMDA6MDAifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: &quot;579a5a3e-1f44-40db-b2fd-1826914d7dd4&quot;,&#10;  &quot;title&quot;: &quot;Seila&quot;,&#10;  &quot;description&quot;: &quot;teste&quot;,&#10;  &quot;imgUrl&quot;: &quot;&quot;,&#10;  &quot;eventUrl&quot;: &quot;http://example.com&quot;,&#10;  &quot;remote&quot;: false,&#10;  &quot;date&quot;: &quot;1970-01-20T21:13:50.431+00:00&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 13:03:37 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="4a5eee5f-6c32-48ef-a175-bbae3a0ab2ac" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;id&quot;:&quot;579a5a3e-1f44-40db-b2fd-1826914d7dd4&quot;,&quot;title&quot;:&quot;Seila&quot;,&quot;description&quot;:&quot;teste&quot;,&quot;imgUrl&quot;:&quot;&quot;,&quot;eventUrl&quot;:&quot;http://example.com&quot;,&quot;remote&quot;:false,&quot;date&quot;:&quot;1970-01-20T21:13:50.431+00:00&quot;}" />
+              <option name="size" value="181" />
+              <option name="time" value="3752" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726060362127" />
+          <option name="id" value="d0e93b4e-08bd-4074-846d-ecf8a6111707" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJpZCI6IjVmZmQ0NjgxLTgzZTItNDNiYy1iYjhlLTJlODI0Y2I0NmQzMCIsInRpdGxlIjoiU2VpbGEiLCJkZXNjcmlwdGlvbiI6InRlc3RlIiwiaW1nVXJsIjoiIiwiZXZlbnRVcmwiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJyZW1vdGUiOmZhbHNlLCJkYXRlIjoiMTk3MC0wMS0yMFQyMToxMzo1MC40MzErMDA6MDAifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: &quot;5ffd4681-83e2-43bc-bb8e-2e824cb46d30&quot;,&#10;  &quot;title&quot;: &quot;Seila&quot;,&#10;  &quot;description&quot;: &quot;teste&quot;,&#10;  &quot;imgUrl&quot;: &quot;&quot;,&#10;  &quot;eventUrl&quot;: &quot;http://example.com&quot;,&#10;  &quot;remote&quot;: false,&#10;  &quot;date&quot;: &quot;1970-01-20T21:13:50.431+00:00&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 13:12:42 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="d0e93b4e-08bd-4074-846d-ecf8a6111707" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;id&quot;:&quot;5ffd4681-83e2-43bc-bb8e-2e824cb46d30&quot;,&quot;title&quot;:&quot;Seila&quot;,&quot;description&quot;:&quot;teste&quot;,&quot;imgUrl&quot;:&quot;&quot;,&quot;eventUrl&quot;:&quot;http://example.com&quot;,&quot;remote&quot;:false,&quot;date&quot;:&quot;1970-01-20T21:13:50.431+00:00&quot;}" />
+              <option name="size" value="181" />
+              <option name="time" value="3751" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726060416242" />
+          <option name="id" value="c8b73663-a5e7-48c6-ad6a-6900720c8c19" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJpZCI6IjUwM2U4YTM3LTkwZTMtNDE0My1hYTBlLTVkNjZiOTllMjdhNyIsInRpdGxlIjoiU2VpbGEiLCJkZXNjcmlwdGlvbiI6InRlc3RlIiwiaW1nVXJsIjoiIiwiZXZlbnRVcmwiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJyZW1vdGUiOmZhbHNlLCJkYXRlIjoiMTk3MC0wMS0yMFQyMToxMzo1MC40MzErMDA6MDAifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: &quot;503e8a37-90e3-4143-aa0e-5d66b99e27a7&quot;,&#10;  &quot;title&quot;: &quot;Seila&quot;,&#10;  &quot;description&quot;: &quot;teste&quot;,&#10;  &quot;imgUrl&quot;: &quot;&quot;,&#10;  &quot;eventUrl&quot;: &quot;http://example.com&quot;,&#10;  &quot;remote&quot;: false,&#10;  &quot;date&quot;: &quot;1970-01-20T21:13:50.431+00:00&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 13:13:36 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="c8b73663-a5e7-48c6-ad6a-6900720c8c19" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;id&quot;:&quot;503e8a37-90e3-4143-aa0e-5d66b99e27a7&quot;,&quot;title&quot;:&quot;Seila&quot;,&quot;description&quot;:&quot;teste&quot;,&quot;imgUrl&quot;:&quot;&quot;,&quot;eventUrl&quot;:&quot;http://example.com&quot;,&quot;remote&quot;:false,&quot;date&quot;:&quot;1970-01-20T21:13:50.431+00:00&quot;}" />
+              <option name="size" value="181" />
+              <option name="time" value="3006" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1726060552735" />
+          <option name="id" value="8bf2c02e-3eae-4812-b58b-b0d20da2e841" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJpZCI6ImMzNjFjMWI3LWFjYjItNDFmZS04NWM3LTFhNjljYjA3YjNmOSIsInRpdGxlIjoiU2VpbGEiLCJkZXNjcmlwdGlvbiI6InRlc3RlIiwiaW1nVXJsIjoiaHR0cHM6Ly9ldmVudG9zdGVjLWltYWdlcy1rYWxlby5zMy5hbWF6b25hd3MuY29tLzkzZjE5MzhiLTYzMzQtNGIxMS1iZTM5LTM3NWFjMDRmNDg4MC0xLmpwZyIsImV2ZW50VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tIiwicmVtb3RlIjpmYWxzZSwiZGF0ZSI6IjE5NzAtMDEtMjBUMjE6MTM6NTAuNDMxKzAwOjAwIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: &quot;c361c1b7-acb2-41fe-85c7-1a69cb07b3f9&quot;,&#10;  &quot;title&quot;: &quot;Seila&quot;,&#10;  &quot;description&quot;: &quot;teste&quot;,&#10;  &quot;imgUrl&quot;: &quot;https://eventostec-images-kaleo.s3.amazonaws.com/93f1938b-6334-4b11-be39-375ac04f4880-1.jpg&quot;,&#10;  &quot;eventUrl&quot;: &quot;http://example.com&quot;,&#10;  &quot;remote&quot;: false,&#10;  &quot;date&quot;: &quot;1970-01-20T21:13:50.431+00:00&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Wed, 11 Sep 2024 13:15:52 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="8bf2c02e-3eae-4812-b58b-b0d20da2e841" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;id&quot;:&quot;c361c1b7-acb2-41fe-85c7-1a69cb07b3f9&quot;,&quot;title&quot;:&quot;Seila&quot;,&quot;description&quot;:&quot;teste&quot;,&quot;imgUrl&quot;:&quot;https://eventostec-images-kaleo.s3.amazonaws.com/93f1938b-6334-4b11-be39-375ac04f4880-1.jpg&quot;,&quot;eventUrl&quot;:&quot;http://example.com&quot;,&quot;remote&quot;:false,&quot;date&quot;:&quot;1970-01-20T21:13:50.431+00:00&quot;}" />
+              <option name="size" value="272" />
+              <option name="time" value="2576" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+      </list>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="title" />
+                        <option name="value" value="Seila" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="description" />
+                        <option name="value" value="teste" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="eventUrl" />
+                        <option name="value" value="http://example.com" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="image" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="C:\Users\kaleo\Downloads\1.jpg" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="remote" />
+                        <option name="value" value="false" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="city" />
+                        <option name="value" value="são paulo" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="uf" />
+                        <option name="value" value="SP" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="date" />
+                        <option name="value" value="1718030431" />
+                      </formDataParameterState>
+                      <formDataParameterState>
+                        <option name="key" value="state" />
+                        <option name="value" value="sp" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="0ead4692-f0b5-4f9d-b100-0cac7de8e7f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/event" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="id" value="bc443162-76e5-4a52-9449-0a992dd673f8" />
+    <option name="version" value="3" />
+  </component>
+</project>
