@@ -79,7 +79,18 @@ public class EventService {
 
     public List<EventResponseDTO> getEvent(int page, int size){
         Pageable pageable = PageRequest.of(page,size);
-        Page<Event> eventsPage = this.repository.FindAll(pageable);
-        return eventsPage.map(event -> new EventResponseDTO(event.getId(), event.getTitle(), event.getDescription(), event.getDate(), event.getRemote(),event.getEventUrl(),event.getImgUrl()))
+        Page<Event> eventsPage = this.repository.findAll(pageable);
+        return eventsPage.stream()
+                .map(event -> new EventResponseDTO(
+                        event.getId(),
+                        event.getTitle(),
+                        event.getDescription(),
+                        event.getDate(),
+                        "",
+                        "",
+                        event.getRemote() != null && event.getRemote(),  // Verificação de nulo para remote
+                        event.getEventUrl(),
+                        event.getImgUrl()
+                )).toList();
     }
 }
