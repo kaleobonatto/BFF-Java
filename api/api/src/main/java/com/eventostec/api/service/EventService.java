@@ -2,6 +2,7 @@ package com.eventostec.api.service;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.eventostec.api.domain.event.Event;
+import com.eventostec.api.domain.event.EventProjection;
 import com.eventostec.api.domain.event.EventRequestDTO;
 import com.eventostec.api.domain.event.EventResponseDTO;
 import com.eventostec.api.repositories.EventRepository;
@@ -32,6 +33,8 @@ public class EventService {
     @Autowired
     private AmazonS3 s3Client;
 
+    @Autowired
+    private AddressService addressService;
 
     @Autowired
     private EventRepository repository;
@@ -51,6 +54,11 @@ public class EventService {
         newEvent.setRemote(data.remote());
 
         repository.save(newEvent);
+
+        if(!data.remote()){
+            this.addressService.createAddress(data, newEvent);
+        }
+
         return newEvent;
     }
 
@@ -77,20 +85,43 @@ public class EventService {
         return convFile;
     }
 
-    public List<EventResponseDTO> getEvent(int page, int size){
-        Pageable pageable = PageRequest.of(page,size);
-        Page<Event> eventsPage = this.repository.findAll(pageable);
-        return eventsPage.stream()
-                .map(event -> new EventResponseDTO(
+    public List<EventResponseDTO> getUpcomingEvents(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<EventProjection> eventsPage = this.repository.findUpcomingEvents(new Date(), pageable);
+        return eventsPage.map(event -> new EventResponseDTO(
                         event.getId(),
                         event.getTitle(),
                         event.getDescription(),
                         event.getDate(),
-                        "",
-                        "",
-                        event.getRemote() != null && event.getRemote(),  // Verificação de nulo para remote
+                        event.getCity() != null ? event.getCity() : "",
+                        event.getUf() != null ? event.getUf() : "",
+                        event.getRemote(),
                         event.getEventUrl(),
-                        event.getImgUrl()
-                )).toList();
+                        event.getImgUrl())
+                )
+                .stream().toList();
+    }
+
+    public List<EventResponseDTO> getFilteredEvents(int page, int size, String city, String uf, Date startDate, Date endDate){
+        city = (city != null) ? city : "";
+        uf = (uf != null) ? uf : "";
+        startDate = (startDate != null) ? startDate : new Date(0);
+        endDate = (endDate != null) ? endDate : new Date();
+
+        Pageable pageable = PageRequest.of(page, size);
+
+        Page<EventProjection> eventsPage = this.repository.findFilteredEvents(city, uf, startDate, endDate, pageable);
+        return eventsPage.map(event -> new EventResponseDTO(
+                        event.getId(),
+                        event.getTitle(),
+                        event.getDescription(),
+                        event.getDate(),
+                        event.getCity() != null ? event.getCity() : "",
+                        event.getUf() != null ? event.getUf() : "",
+                        event.getRemote(),
+                        event.getEventUrl(),
+                        event.getImgUrl())
+                )
+                .stream().toList();
     }
 }
