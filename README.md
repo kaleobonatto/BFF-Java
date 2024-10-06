@@ -1,6 +1,6 @@
 # 🚀 BFF API - Backend For Frontend
 
-Este projeto utiliza **Java Spring Boot** para construir um **Backend For Frontend (BFF)**, com o banco de dados **PostgreSQL**. Vamos realizar o deploy na **AWS**, aproveitando serviços como **EC2**, **RDS**, **VPC**, **S3**, e muito mais! Durante o desenvolvimento, abordaremos conceitos como paginação, filtros, modelagem de dados e arquitetura de soluções. Você vai sair **PRO no Backend** 💪🏼.
+Este projeto utiliza **Java Spring Boot** para construir um **Backend For Frontend (BFF)**, com o banco de dados **PostgreSQL**. Vamos realizar o deploy na **AWS**, aproveitando serviços como **EC2**, **RDS**, **VPC**, **S3**. Durante o desenvolvimento, foi abordado conceitos como paginação, filtros, modelagem de dados e arquitetura de soluções
 
 ## 🛠️ Tecnologias Utilizadas
 
